@@ -1,0 +1,92 @@
+<?php
+
+use App\Models\WasitPelatih;
+
+$data = [
+    [
+        'nama_lengkap' => 'Andi Pratama',
+        'nik' => '1234567890123456',
+        'tempat_lahir' => 'Jakarta',
+        'tanggal_lahir' => '1990-05-15',
+        'jenis_kelamin' => 'Laki-laki',
+        'no_wa' => '081234567890',
+        'email' => 'andi@example.com',
+        'provinsi' => 'DKI Jakarta',
+        'kabupaten_kota' => 'Jakarta Selatan',
+        'klub_asal' => 'Jakarta Skate Club',
+        'kategori' => 'Pelatih',
+        'lisensi' => 'Nasional',
+        'foto_path' => 'wasit_pelatih/foto/dummy1.jpg',
+        'status' => 'pending',
+    ],
+    [
+        'nama_lengkap' => 'Budi Santoso',
+        'nik' => '1234567890123457',
+        'tempat_lahir' => 'Surabaya',
+        'tanggal_lahir' => '1985-10-20',
+        'jenis_kelamin' => 'Laki-laki',
+        'no_wa' => '081234567891',
+        'email' => 'budi@example.com',
+        'provinsi' => 'Jawa Timur',
+        'kabupaten_kota' => 'Surabaya',
+        'klub_asal' => 'Suroboyo Roller',
+        'kategori' => 'Wasit',
+        'lisensi' => 'Internasional',
+        'foto_path' => 'wasit_pelatih/foto/dummy2.jpg',
+        'status' => 'proses',
+    ],
+    [
+        'nama_lengkap' => 'Citra Lestari',
+        'nik' => '1234567890123458',
+        'tempat_lahir' => 'Bandung',
+        'tanggal_lahir' => '1992-03-12',
+        'jenis_kelamin' => 'Perempuan',
+        'no_wa' => '081234567892',
+        'email' => 'citra@example.com',
+        'provinsi' => 'Jawa Barat',
+        'kabupaten_kota' => 'Bandung',
+        'klub_asal' => 'Bandung Skaters',
+        'kategori' => 'Pelatih',
+        'lisensi' => 'Daerah',
+        'foto_path' => 'wasit_pelatih/foto/dummy3.jpg',
+        'status' => 'diterima',
+    ],
+    [
+        'nama_lengkap' => 'Dedi Wijaya',
+        'nik' => '1234567890123459',
+        'tempat_lahir' => 'Medan',
+        'tanggal_lahir' => '1988-07-08',
+        'jenis_kelamin' => 'Laki-laki',
+        'no_wa' => '081234567893',
+        'email' => 'dedi@example.com',
+        'provinsi' => 'Sumatera Utara',
+        'kabupaten_kota' => 'Medan',
+        'klub_asal' => 'Medan Roller Community',
+        'kategori' => 'Wasit',
+        'lisensi' => 'Nasional',
+        'foto_path' => 'wasit_pelatih/foto/dummy4.jpg',
+        'status' => 'selesai',
+    ],
+    [
+        'nama_lengkap' => 'Eka Putri',
+        'nik' => '1234567890123460',
+        'tempat_lahir' => 'Semarang',
+        'tanggal_lahir' => '1995-12-25',
+        'jenis_kelamin' => 'Perempuan',
+        'no_wa' => '081234567894',
+        'email' => 'eka@example.com',
+        'provinsi' => 'Jawa Tengah',
+        'kabupaten_kota' => 'Semarang',
+        'klub_asal' => 'Semarang Skate Power',
+        'kategori' => 'Pelatih',
+        'lisensi' => 'Belum Ada',
+        'foto_path' => 'wasit_pelatih/foto/dummy5.jpg',
+        'status' => 'ditolak',
+    ],
+];
+
+foreach ($data as $item) {
+    WasitPelatih::create($item);
+}
+
+echo "Berhasil menambahkan 5 data dummy Wasit/Pelatih dengan berbagai status.\n";

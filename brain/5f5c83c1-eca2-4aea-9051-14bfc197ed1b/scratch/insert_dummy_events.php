@@ -1,0 +1,141 @@
+<?php
+
+use App\Models\Event;
+use Illuminate\Support\Carbon;
+
+// Clear existing events if needed? No, let's just append.
+// Event::truncate();
+
+$events = [
+    // SKATEBOARD
+    [
+        'name' => 'National Skateboard Championship 2024',
+        'name_en' => 'National Skateboard Championship 2024',
+        'start_date' => Carbon::now()->addDays(10),
+        'end_date' => Carbon::now()->addDays(12),
+        'venue' => 'Gelanggang Olahraga Bung Karno',
+        'venue_en' => 'Bung Karno Sports Complex',
+        'city' => 'Jakarta',
+        'city_en' => 'Jakarta',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Kejuaraan nasional skateboard disiplin street dan park untuk kategori putra dan putri.',
+        'description_en' => 'National skateboarding championship for street and park disciplines, male and female categories.',
+        'category' => 'kompetisi',
+        'sport_type' => 'skateboard',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+    [
+        'name' => 'Skateboard Coaching Clinic Series 1',
+        'name_en' => 'Skateboard Coaching Clinic Series 1',
+        'start_date' => Carbon::now()->addDays(20),
+        'end_date' => Carbon::now()->addDays(21),
+        'venue' => 'Taman Mini Indonesia Indah',
+        'venue_en' => 'Taman Mini Indonesia Indah',
+        'city' => 'Jakarta',
+        'city_en' => 'Jakarta',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Pelatihan teknik dasar skateboard bagi pemula dan menengah.',
+        'description_en' => 'Basic skateboarding technique training for beginners and intermediates.',
+        'category' => 'pelatihan',
+        'sport_type' => 'skateboard',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+
+    // SEPATU RODA
+    [
+        'name' => 'Piala Ibu Negara Sepatu Roda 2024',
+        'name_en' => 'First Lady Cup Inline Speed Skating 2024',
+        'start_date' => Carbon::now()->addDays(5),
+        'end_date' => Carbon::now()->addDays(8),
+        'venue' => 'Sirkuit Sepatu Roda Jatidiri',
+        'venue_en' => 'Jatidiri Inline Skate Circuit',
+        'city' => 'Semarang',
+        'city_en' => 'Semarang',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Kejuaraan bergengsi tingkat nasional memperebutkan Piala Ibu Negara.',
+        'description_en' => 'Prestigious national level championship competing for the First Lady Cup.',
+        'category' => 'kompetisi',
+        'sport_type' => 'inline_skate',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+    [
+        'name' => 'Artistic Skating Performance Night',
+        'name_en' => 'Artistic Skating Performance Night',
+        'start_date' => Carbon::now()->addDays(15),
+        'end_date' => Carbon::now()->addDays(15),
+        'venue' => 'Istora Senayan',
+        'venue_en' => 'Istora Senayan',
+        'city' => 'Jakarta',
+        'city_en' => 'Jakarta',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Eksibisi seni sepatu roda yang menampilkan gerakan akrobatik dan koreografi indah.',
+        'description_en' => 'Roller skating art exhibition featuring acrobatic movements and beautiful choreography.',
+        'category' => 'exhibition',
+        'sport_type' => 'artistic',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+
+    // SCOOTER
+    [
+        'name' => 'Indonesia Scooter Freestyle Championship',
+        'name_en' => 'Indonesia Scooter Freestyle Championship',
+        'start_date' => Carbon::now()->addDays(25),
+        'end_date' => Carbon::now()->addDays(27),
+        'venue' => 'Summarecon Mall Serpong',
+        'venue_en' => 'Summarecon Mall Serpong',
+        'city' => 'Tangerang',
+        'city_en' => 'Tangerang',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Kompetisi freestyle scooter tingkat nasional untuk kategori pro dan open.',
+        'description_en' => 'National level freestyle scooter competition for pro and open categories.',
+        'category' => 'kompetisi',
+        'sport_type' => 'scooter',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+    [
+        'name' => 'Scooter Safety Workshop',
+        'name_en' => 'Scooter Safety Workshop',
+        'start_date' => Carbon::now()->addDays(30),
+        'end_date' => Carbon::now()->addDays(30),
+        'venue' => 'Stadion Patriot Chandrabaga',
+        'venue_en' => 'Patriot Chandrabaga Stadium',
+        'city' => 'Bekasi',
+        'city_en' => 'Bekasi',
+        'country' => 'Indonesia',
+        'country_en' => 'Indonesia',
+        'organizer' => 'PB PERSEROSI',
+        'organizer_en' => 'PB PERSEROSI',
+        'description' => 'Workshop mengenai keamanan dan etika berkendara scooter di area publik.',
+        'description_en' => 'Workshop on safety and ethics of riding scooters in public areas.',
+        'category' => 'pelatihan',
+        'sport_type' => 'scooter',
+        'status' => 'upcoming',
+        'is_published' => true,
+    ],
+];
+
+foreach ($events as $eventData) {
+    Event::create($eventData);
+}
+
+echo "Berhasil menambahkan 6 data dummy event (2 untuk setiap cabor).\n";
