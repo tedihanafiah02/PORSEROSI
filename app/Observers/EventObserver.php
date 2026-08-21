@@ -54,3 +54,6 @@ class EventObserver
         }
     }
 }
+
+
+// masukan datanya ke dalam semua function diatas, jadi tinggal di panggil aja di view nya
