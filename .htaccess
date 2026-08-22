@@ -1,4 +1,1 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^sitemap\.xml$ /sitemap.xml [L]
-</IfModule>
+DirectoryIndex server.php
